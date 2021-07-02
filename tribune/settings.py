@@ -31,8 +31,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# Configure Django App for Heroku.
-django_heroku.settings(locals())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -156,6 +154,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
 
 
 
